@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#100b12">
+  <meta name="description" content="Netplix — a birthday streaming surprise made for Rishita.">
+  <title>Netplix</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="streaming.css">
+  <link rel="stylesheet" href="auth.css">
+  <link rel="stylesheet" href="profiles.css">
+  <link rel="stylesheet" href="journey.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <section class="gate screen" id="gate" aria-labelledby="gate-title">
+      <div class="gate-glow"></div>
+      <a class="brand" href="#" aria-label="Netplix"><span class="brand-wordmark">NETPLIX</span></a>
+      <div class="gate-content">
+        <form class="login-form" id="login-form" novalidate>
+          <h1 id="gate-title">Sign In</h1>
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" placeholder="Enter your username" autocomplete="username" required>
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+          <button class="primary-button enter-button" type="submit">Sign In</button>
+          <p class="login-feedback" id="login-feedback" role="status" aria-live="polite"></p>
+          <p class="login-help">A little birthday surprise is waiting inside ♡</p>
+        </form>
+      </div>
+      <p class="gate-foot">NETPLIX · A birthday original made for Rishita</p>
+    </section>
+
+    <section class="profile-picker screen is-hidden" id="profile-picker" aria-labelledby="profile-title">
+      <header class="picker-header"><a class="brand" href="#top" aria-label="Netplix"><span class="brand-wordmark">NETPLIX</span></a></header>
+      <div class="picker-content">
+        <h1 id="profile-title">Who's watching?</h1>
+        <div class="profile-options">
+          <button class="profile-option" id="rishu-profile" type="button" aria-label="Continue as Rishu">
+            <span class="profile-picture rishu-picture"><img src="assets/propic.jpeg" alt=""></span>
+            <span class="profile-name">Rishu</span>
+          </button>
+          <button class="profile-option" id="children-profile" type="button" aria-label="Children profile">
+            <span class="profile-picture children-picture"><span aria-hidden="true">🧸</span></span>
+            <span class="profile-name">Children</span>
+          </button>
+        </div>
+        <p class="picker-hint">Choose your profile to continue</p>
+      </div>
+    </section>
+
+    <section class="app screen is-hidden" id="app" aria-label="Birthday streaming experience">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="Netplix home"><span class="brand-wordmark">NETPLIX</span></a>
+        <nav class="main-nav" aria-label="Main navigation"><a class="active" href="#top">Home</a><a href="#episodes">TV Shows</a><a href="#memories">Memories</a><a href="#extras">My List</a></nav>
+        <button class="profile-chip" id="profile-chip" aria-label="Current profile: Rishu"><img class="account-avatar" src="assets/propic.jpeg" alt=""><span>Rishu</span><span class="chevron">⌄</span></button>
+      </header>
+
+      <section class="hero" id="top">
+        <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="hero-star star-a">✦</div><div class="hero-star star-b">✧</div><div class="hero-star star-c">✦</div><div class="hero-number">01</div></div>
+        <div class="hero-content">
+          <p class="eyebrow"><span class="sparkle">✦</span> NETPLIX SERIES</p>
+          <h1>Rishita:<br><em>The Main Character</em></h1>
+          <div class="meta"><span class="match">98% for you</span><span>2026</span><span class="tag">Birthday special</span><span>1 episode</span></div>
+          <p class="hero-description">Some people make every scene brighter. This little series celebrates one of them. Get comfy—your premiere is ready.</p>
+          <div class="hero-actions"><button class="primary-button" data-play="episode"><span class="play-icon">▶</span> Play</button><a class="secondary-button" href="#episodes"><span>ⓘ</span> More Info</a></div>
+        </div>
+        <div class="hero-caption">A story in one very special season</div>
+      </section>
+
+      <section class="content-section" id="episodes">
+        <div class="section-heading"><div><p class="eyebrow">CONTINUE WATCHING</p><h2>Rishita: The Main Character <span class="season-note">· Season 1</span></h2></div><span class="section-count">01 EPISODE</span></div>
+        <button class="episode-card" data-play="episode">
+          <span class="episode-thumb"><span class="thumb-glow"></span><span class="thumb-play">▶</span><span class="episode-number">S1:E1</span></span>
+          <span class="episode-info"><span class="episode-title">The Main Character</span><span class="episode-subtitle">The birthday premiere · A little something made for you</span></span>
+          <span class="episode-length">Play your video <span aria-hidden="true">↗</span></span>
+        </button>
+      </section>
+
+      <section class="content-section memories-section" id="memories">
+        <div class="section-heading"><div><p class="eyebrow">A COLLECTION JUST FOR YOU</p><h2>Little moments, big main-character energy</h2></div></div>
+        <div class="thumbnail-rail" aria-label="Personal photo collection">
+          <article class="thumbnail-card"><img src="assets/thumbnails/memory-01.jpg" alt="Add your first favorite photo" loading="lazy"><span>One for the memories</span></article>
+          <article class="thumbnail-card"><img src="assets/thumbnails/memory-02.jpg" alt="Add another favorite photo" loading="lazy"><span>That unforgettable day</span></article>
+          <article class="thumbnail-card"><img src="assets/thumbnails/memory-03.jpg" alt="Add a photo of a favorite moment" loading="lazy"><span>Pure you</span></article>
+          <article class="thumbnail-card"><img src="assets/thumbnails/memory-04.jpg" alt="Add a photo that makes you smile" loading="lazy"><span>Instant classic</span></article>
+          <article class="thumbnail-card"><img src="assets/thumbnails/memory-05.jpg" alt="Add one more favorite photo" loading="lazy"><span>Best scene ever</span></article>
+          <article class="thumbnail-card"><img src="assets/thumbnails/memory-06.jpg" alt="Add a birthday photo" loading="lazy"><span>The birthday edit</span></article>
+        </div>
+      </section>
+
+      <section class="content-section extras-section" id="extras">
+        <div class="section-heading"><div><p class="eyebrow">AFTER THE CREDITS</p><h2>More reasons to celebrate</h2></div><span class="section-count">SPECIAL FEATURES</span></div>
+        <div class="extras-grid">
+          <button class="extra-card memory-card" data-extra="note"><span class="extra-icon">✉</span><span class="extra-label">A note for you</span><span class="extra-description">A little message from the person behind the camera</span><span class="extra-arrow">↗</span></button>
+          <button class="extra-card wish-card" data-extra="wish"><span class="extra-icon">✧</span><span class="extra-label">Make a birthday wish</span><span class="extra-description">Tap for a tiny moment of birthday magic</span><span class="extra-arrow">↗</span></button>
+          <button class="extra-card credits-card" data-extra="credits"><span class="extra-icon">♡</span><span class="extra-label">The end credits</span><span class="extra-description">Featuring: you. Made with: a whole lot of love.</span><span class="extra-arrow">↗</span></button>
+        </div>
+      </section>
+      <footer class="footer"><span class="brand-mark">✦</span><span>Made for Rishita, with love.</span><span class="footer-year">A one-day-only kind of premiere</span></footer>
+    </section>
+  </main>
+
+  <dialog class="player-dialog" id="player-dialog" aria-label="Birthday episode">
+    <div class="player-top"><span><span class="brand-wordmark">NETPLIX</span> <span class="player-title">· Rishita: The Main Character</span></span><button class="icon-button" data-close aria-label="Close video">×</button></div>
+    <video id="birthday-video" controls playsinline preload="metadata" poster="assets/poster.svg"><source src="assets/intro.mp4" type="video/mp4">Your browser does not support video playback.</video>
+    <div class="player-caption"><strong>S1:E1 · The Main Character</strong><span>Made just for you ♡</span></div>
+  </dialog>
+
+  <dialog class="message-dialog" id="message-dialog"><button class="icon-button message-close" data-close aria-label="Close message">×</button><div class="message-symbol" id="message-symbol">♡</div><p class="eyebrow" id="message-kicker">A NOTE FOR YOU</p><h2 id="message-title">Happy birthday, Rishita.</h2><p class="message-body" id="message-body">The best stories are better because you're in them. I hope this year brings you all the little things that make you smile—and a few big surprises too. You deserve to feel celebrated today and every day. ♡</p><p class="message-signoff">— with love, always</p></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
